@@ -8,10 +8,13 @@
     </head>
     <body>
         {% for post in posts %}
-            <div class="ui raised segment very padded text container">
+            <div class="ui text container">
                 <h1 ><a href="">{{ post.title }}</a> </h1>
-                <h4 class=" ui {{ colors.pop }} header">published:{{ post.published_date }}</h4>
-                <p>{{ post.text|linebreaksbr }}</p>
+                <h4 class=" ui {% cycle 'yellow' 'red' %}  header">published:{{ post.published_date }}</h4>
+{#                <h4 class=" ui {% cycle  colors c2 as raw %} header">published:{{ post.published_date }}</h4>#}
+
+{#                <p class="ui raised " style="word-wrap: break-word">{{ post.text|linebreaksbr }}</p>#}
+                <p style="word-wrap: break-word">{{ post.text }}</p>
             </div>
         {% endfor %}
     </body>
