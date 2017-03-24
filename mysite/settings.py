@@ -25,7 +25,10 @@ SECRET_KEY = 'xe9s0*d=hp8y48&!e^&d+t4kvzrq-5chff_f)=sv8_7yomp%2('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['oppotvr.pythonanywhere.com']
+ALLOWED_HOSTS = [
+    'oppotvr.pythonanywhere.com',
+    '127.0.0.1',
+    ]
 
 
 # Application definition
